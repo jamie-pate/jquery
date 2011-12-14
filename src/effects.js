@@ -13,6 +13,13 @@ var elemdisplay = {},
 		// opacity animations
 		[ "opacity" ]
 	],
+	boxSizingSwap = {
+		"MsBoxSizing" : "content-box",
+		"OBoxSizing" : "content-box",
+		"MozBoxSizing" : "content-box",
+		"WebkitBoxSizing" : "content-box",
+		"boxSizing" : "content-box"
+	},
 	fxNow;
 
 jQuery.fn.extend({
@@ -439,7 +446,7 @@ jQuery.fx.prototype = {
 			elem = this.elem,
 			prop = this.prop,
 			r;
-		jQuery.swap( this.elem, { "box-sizing" : "content-box" }, function() {
+		jQuery.swap( this.elem, boxSizingSwap, function() {
 			r = jQuery.css( elem, prop );
 		});
 		// Empty strings, null, undefined and "auto" are converted to 0,
