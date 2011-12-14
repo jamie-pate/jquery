@@ -436,7 +436,12 @@ jQuery.fx.prototype = {
 		}
 
 		var parsed,
-			r = jQuery.css( this.elem, this.prop );
+			elem = this.elem,
+			prop = this.prop,
+			r;
+		jQuery.swap( this.elem, { "box-sizing" : "content-box" }, function() {
+			r = jQuery.css( elem, prop );
+		});
 		// Empty strings, null, undefined and "auto" are converted to 0,
 		// complex values such as "rotate(1rad)" are returned as is,
 		// simple values such as "10px" are parsed to Float.
