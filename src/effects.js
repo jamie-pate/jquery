@@ -14,10 +14,7 @@ var elemdisplay = {},
 		[ "opacity" ]
 	],
 	boxSizingSwap = {
-		"MsBoxSizing" : "content-box",
-		"OBoxSizing" : "content-box",
 		"MozBoxSizing" : "content-box",
-		"WebkitBoxSizing" : "content-box",
 		"boxSizing" : "content-box"
 	},
 	fxNow;
