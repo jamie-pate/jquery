@@ -149,6 +149,9 @@ jQuery.extend({
 		// Remember the old values, and insert the new ones
 		for ( name in options ) {
 			old[ name ] = elem.style[ name ];
+		}
+		//some css properties are linked (WebkitBoxSizing,BoxSizing), make sure to remember all old properties first
+		for ( name in options ) {
 			elem.style[ name ] = options[ name ];
 		}
 

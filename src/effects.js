@@ -14,6 +14,9 @@ var elemdisplay = {},
 		[ "opacity" ]
 	],
 	boxSizingSwap = {
+		"msBoxSizing" : "content-box",
+		"OBoxSizing" : "content-box",
+		"WebkitBoxSizing" : "content-box",
 		"MozBoxSizing" : "content-box",
 		"boxSizing" : "content-box"
 	},
